@@ -1,0 +1,117 @@
+:root {
+  --theme: #8dcfff;
+  --col: #FFFFFF ;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #F5F5F5;
+}
+
+a {
+  color: #222222;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  text-align: center;
+  width: 430px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.btn__wrapper, .calendar {
+  display: inline-block;
+}
+
+.btn__wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.btn__wrapper.next {
+  right: 0;
+}
+.btn__wrapper.prev {
+  left: 0;
+}
+.btn__wrapper.next, .btn__wrapper.prev {
+  cursor: pointer;
+}
+.btn__wrapper.next path, .btn__wrapper.prev path {
+  stroke: var(--theme);
+}
+
+.calendar {
+  width: 350px;
+  background-color: #FFFFFF;
+  position: relative;
+  margin: 3rem auto;
+}
+.calendar__header {
+  background-color: var(--theme);
+  color: var(--col);
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.calendar__month__year {
+  display: inline-block;
+  background-color: var(--theme);
+  position: relative;
+  padding: 5px;
+  z-index: 9999;
+}
+.calendar__body {
+  position: relative;
+}
+.calendar__days {
+  text-align: left;
+}
+.calendar__day {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.calendar__day__number {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.draw-circle, .header__season {
+  position: absolute;
+}
+.draw-circle svg, .header__season svg {
+  position: relative;
+}
+
+.draw-circle svg {
+  left: 5px;
+  top: 5px;
+}
+
+svg use {
+  stroke: #222;
+  stroke-width: 1;
+}
+
+.today-svg {
+  stroke: var(--theme);
+  stroke-width: 2;
+}
+
+#winter, #spring, #summer, #fall {
+  visibility: hidden;
+}
+
+#winter.winter, #spring.spring, #summer.summer, #fall.fall {
+  visibility: visible;
+}
+
+.today-svg.hidden, .selected-days.hidden {
+  display: none;
+}

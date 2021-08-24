@@ -1,0 +1,11 @@
+<br> <br>
+<form method="get" action="{% url 'busca' %}">
+    <div class="form-group row">
+        <div class="col-12">
+            <input type="search" value="{{request.GET.termo}}" id="search-input" class="form-control rounded"
+                placeholder="Search" aria-label="Search" aria-describedby="search-addon" name="termo" />
+            </span>
+        </div>
+    </div>
+    {% include 'parciais/_messeges.html'%}
+</form>

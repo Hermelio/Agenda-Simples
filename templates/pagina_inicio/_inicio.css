@@ -1,0 +1,70 @@
+.compromisso {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-radius: 2px;
+    background-color: #1867c0;
+    color: #ffffff;
+    border: 1px solid #1867c0;
+    width: 100%;
+    font-size: 12px;
+    padding: 3px;
+    cursor: pointer;
+    margin-bottom: 1px;
+  }
+  
+  .botao-direcional{
+    margin-top: 10px;
+    margin-left: 0px;
+  }
+  
+  
+  .v-calendar-weekly__day-label:not(.primary--text){
+    width: 100%;
+    text-align: left;
+    padding-left: 5px;
+  }
+  
+
+  
+  .quadrado-cor{
+    width:20px; 
+    height:20px;
+    margin-right:5px;
+  }
+  
+  .container-mes{
+    cursor: pointer; 
+    display: block !important; 
+    padding: 0px !important;
+  }
+  
+  .botao-grupo-calendario {
+    margin-top: 16px;
+    margin-left: 0px;
+  }
+  
+  @media screen and (max-width: 599px) {
+    .botao-direcional {
+      position: relative;
+      top: 5px;
+    }
+    
+    .botao-grupo-calendario-flex {
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 768px){
+    .compromisso{
+      font-size: 9px;
+      padding: 1px;
+    }
+    
+    .label-dia-semana{
+      font-size: 20px;
+    }
+  }
+  
+  
+  

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block titulo%} Dashboard de {{user}} | {% endblock %}
+{% block contatos %}
+<button class="btn btn-primary"><a href="{% url 'logout' %}"
+        style="text-decoration: none; color:white">Sair</a></button>
+<h1 class="mt-3 mb-3">
+    Dashboard
+</h1>
+{% include 'parciais/_messeges.html' %}
+<div class="container">
+    <form action="{% url 'dashboard' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <table class="table">
+            {{ form }}
+            <tr>
+                <td colspan="2">
+                    <button class="btn btn-primary" type="submit">Enviar</button>
+                </td>
+            </tr>
+        </table>
+
+    </form>
+
+</div>
+{% endblock %}
